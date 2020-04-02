@@ -6,9 +6,9 @@ ENV ZURB_FOUNDATION_VERSION 4.3.2
 ENV MERMAID_VERSION 7.0.9
 WORKDIR /root
 
-RUN gem install asciidoctor-pdf-cjk-kai_gen_gothic --no-ri --no-rdoc && \
-    gem install --version ${COMPASS_VERSION} compass --no-ri --no-rdoc && \
-    gem install --version ${ZURB_FOUNDATION_VERSION} zurb-foundation --no-ri --no-rdoc && \
+RUN gem install asciidoctor-pdf-cjk-kai_gen_gothic -N && \
+    gem install --version ${COMPASS_VERSION} compass -N && \
+    gem install --version ${ZURB_FOUNDATION_VERSION} zurb-foundation -N && \
     asciidoctor-pdf-cjk-kai_gen_gothic-install && \
     ln -fs /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     apk add --no-cache nodejs nodejs-npm ca-certificates openssl && \
