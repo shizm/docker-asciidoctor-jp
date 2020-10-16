@@ -1,4 +1,4 @@
-FROM asciidoctor/docker-asciidoctor
+FROM shizm/docker-asciidoctor
 LABEL MAINTAINER Satoru YAMASAKI <gookun@gmail.com>
 
 ENV COMPASS_VERSION 0.12.7
